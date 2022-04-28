@@ -4,7 +4,11 @@
       <HeaderInfo/>
       <Hero/>    
     </header>
-    <main></main>
+
+    <main>
+      <MainComp/>
+    </main>
+    
     <footer></footer>
   </div>
 </template>
@@ -12,12 +16,14 @@
 <script>
   import HeaderInfo from './components/headerComp/HeaderInfo.vue'
   import Hero from './components/headerComp/Hero.vue'
+  import MainComp from './components/MainComp.vue'
 
 export default {
   name: 'App',
   components: {
     HeaderInfo,
-    Hero
+    Hero,
+    MainComp
   }
 }
 </script>
