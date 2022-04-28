@@ -3,7 +3,7 @@
     <!--inserire contenuto componente-->
     <div class="box">
         <h6 class="text-uppercase">introduction video</h6>
-        <h2 class="fw-bold py-3">Advisory <span class="text-custom">Perfomance</span> </h2>
+        <h2 class="fs-1 fw-bold py-3">Advisory <span class="text-custom">Perfomance</span> </h2>
         <p>Financial executives nedd to review theri srategies, operating models and capabilities so that their areas cane generate sound information for better decision making.</p>
         <div class="img-video d-flex align-items-center justify-content-center">
             <span><i class="fa-solid fa-play"></i></span>
@@ -36,6 +36,9 @@ export default {
  }
  h6{
      color: $blue-lagoon;
+ }
+ p{
+     color: $silver-sand;
  }
  .text-custom{
     color: $blue-lagoon; 
