@@ -4,7 +4,7 @@
     <div class="containers text-center">
         <h6 class="text-uppercase">what are we doing</h6>
         <h2 class="fs-1 fw-bold py-3 text-light"><span class="text-custom">Results</span> in Numbers</h2>
-        <div class=" d-flex justify-content-between">
+        <div class=" d-flex justify-content-around">
             <div v-for="(element, index) in numberUtility" :key="index" class="text-light d-flex flex-column mt-5">
                 <span class="c-fountain-blue fw-bold fs-3">{{element.numero}}</span>
                 <span class="fw-bold fs-5">{{element.nome}}</span>
@@ -53,10 +53,6 @@ export default {
  .traffic-image{
      background-image: url(../../assets/img/bg-1.jpg);
  }
-    .box{
-     width: 60%;
-     margin: 0 auto;
- }
  .containers{
      width: 80%;
      margin: 0 auto;
@@ -65,7 +61,7 @@ export default {
      color: $blue-lagoon;
  }
  .text-custom{ 
-    background-color: $tradewind;
+    background-color: $surfiegreen;
     padding: 3px 6px;
     border-radius: 5px;
  }
