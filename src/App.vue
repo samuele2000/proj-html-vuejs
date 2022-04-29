@@ -9,7 +9,10 @@
       <MainComp/>
     </main>
     
-    <footer></footer>
+    <footer>
+      <FooterLinkComp/>
+      <FooterComp2/>
+    </footer>
   </div>
 </template>
 
@@ -17,13 +20,17 @@
   import HeaderInfo from './components/headerComp/HeaderInfo.vue'
   import Hero from './components/headerComp/Hero.vue'
   import MainComp from './components/MainComp.vue'
+  import FooterLinkComp from './components/componenti-footer/FooterLinkComp.vue'
+  import FooterComp2 from './components/componenti-footer/FooterComp2.vue'
 
 export default {
   name: 'App',
   components: {
     HeaderInfo,
     Hero,
-    MainComp
+    MainComp,
+    FooterLinkComp,
+    FooterComp2
   }
 }
 </script>
