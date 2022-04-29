@@ -7,6 +7,7 @@
     <TeamComp/>
     <NewsComp/>
     <NewsletterComp/>
+    <MessageComp/>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import ServicesComp from './componenti-main/ServicesComp.vue'
 import TeamComp from './componenti-main/TeamComp.vue'
 import NewsComp from './componenti-main/NewsComp.vue'
 import NewsletterComp from './componenti-main/NewsletterComp.vue'
+import MessageComp from './componenti-main/MessageComp.vue'
 export default {
   //Cambiare il nome con quello del componente creato
   name: 'MainComp',
@@ -27,6 +29,7 @@ export default {
        TeamComp,
        NewsComp,
        NewsletterComp,
+       MessageComp,
     }
 }
 </script>

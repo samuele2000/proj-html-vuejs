@@ -1,24 +1,56 @@
 <template>
-    <div class="bg_color py_5">
+    <div class="py_5">
         <!--inserire contenuto componente-->
         <div class="containers">
             <div class="rows">
-                <div class="text">
-                   <h6 class="title-2 c-fountain-blue">newsletter</h6>
-                    <h2 class="title"><span class="text-custom">Know</span> First</h2>
-                    <p class="c-silver-sand">
-                         Follow closely and receive content about our company and the news of the current market.
-                    </p> 
-                </div>
-                
-                <!-- input -->
                 <div class="input">
-                    <input class="input-custom" type="text" placeholder="Name">
-                    <input class="input-custom" type="email" placeholder="Email">
+                    <div class="text">
+                        <h6 class="title-2 c-fountain-blue">send a message</h6>
+                        <h2 class="title">Get in <span class="text-custom c-blue-lagoon">Touch</span></h2>
+                        <p class="c-silver-sand">
+                            We will responde to your message as soon as possible.
+                        </p>
+                    </div>
                     <div>
-                        <button type="button" class="button-all bg-blue-lagoon">subscribe</button>
+                        <input class="input-custom mr_10" type="text" placeholder="Name">
+                        <input class="input-custom" type="email" placeholder="Email">
+                    </div>
+                    <div>
+                        <input class="input-custom mr_10" type="numeber" placeholder="Phone">
+                        <input class="input-custom" type="text" placeholder="More Info">
+                    </div>
+
+                    <input class="input-custom-message" type="message" placeholder="Message">
+
+
+                    <div>
+                        <button type="button" class="button-all bg-blue-lagoon">send</button>
                     </div>
                 </div>
+                <!-- info -->
+                <div>
+                    <div class="box-internal">
+                        <h6>Example Inc.</h6>
+                        <p class="c-silver-sand">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p class="c-silver-sand">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="info">
+                            <span class="c-blue-lagoon"><i class="fa-solid fa-phone circle bg_surfiegreen mr_10"></i>+1
+                                (305) 1234-5678</span>
+                            <span class="c-blue-lagoon"><i
+                                    class="fa-solid fa-envelope my_40 circle bg_surfiegreen mr_10"></i>hello@example.com</span>
+                            <span class="c-blue-lagoon"><i
+                                    class="fa-solid fa-location-dot circle bg_surfiegreen mr_10"></i>Main Avenue,
+                                987</span>
+                            <div>
+                                <button type="button" class="button-empty">view map</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
             </div>
         </div>
     </div>
@@ -27,7 +59,7 @@
 <script>
     export default {
         //Cambiare il nome con quello del componente creato
-        name: 'NewsletterComp',
+        name: 'MessageComp',
 
     }
 </script>
@@ -37,16 +69,16 @@
 
     /*Inserire style componente*/
     // color
-    .bg_color {
-        background-color: $woodsmoke;
-    }
-
     .bg-blue-lagoon {
         background-color: $blue-lagoon;
     }
 
+    .bg_surfiegreen {
+        background-color: $surfiegreen;
+    }
+
     .containers {
-        width: 70%;
+        width: 80%;
         margin: 0 auto;
     }
 
@@ -66,25 +98,36 @@
     .fs_2 {
         font-size: 1.6em;
     }
+
     .py_5 {
         padding: 100px 0;
     }
-    .mr-10{
-        margin-right: 10px;
+
+    .mr_10 {
+        margin-right: 20px !important;
     }
+
+    .my_40 {
+        margin: 40px 0;
+    }
+
     .p_30 {
         padding-top: 100px;
     }
+
     .p-relative {
         position: relative;
     }
-    .opacity{
+
+    .opacity {
         opacity: 0;
     }
-    .d-none{
+
+    .d-none {
         display: none;
     }
-     .overlay {
+
+    .overlay {
         background-color: rgba(0, 0, 0, 0.5);
         position: absolute;
         top: 0;
@@ -93,13 +136,21 @@
         left: 0;
         border-radius: 10px;
     }
+
+    .circle {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 35px;
+    }
+
     //fine utility
-    
+
     .title {
         font-weight: bold;
         font-size: 2em;
         margin: 20px 0;
-        color: #fff;
     }
 
     .title-2 {
@@ -110,7 +161,6 @@
     }
 
     .text-custom {
-        color: #fff;
         background-color: $surfiegreen;
         padding: 3px 6px;
         border-radius: 5px;
@@ -125,23 +175,62 @@
     .button-all {
         text-transform: uppercase;
         color: #fff;
-        padding: 10px 20px;
+        padding: 5px 20px;
         border-radius: 5px;
         border: none;
-        margin-top: 5px;
+        margin-top: 20px;
     }
-    .input{
+
+    .button-empty {
+        background-color: transparent;
+        border: 1px solid $blue-lagoon;
+        text-transform: uppercase;
+        color: $blue-lagoon;
+        padding: 5px 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+
+    .input {
         display: flex;
         flex-direction: column;
-        flex-basis: 50%;
+        flex-basis: 60%;
     }
-    .text{
-       margin-right: 50px;
+
+    .text {
+        margin-right: 50px;
     }
-    .input-custom{
+
+    .input-custom {
+        background-color: $abbey-01;
+        border: none;
+        padding: 10px 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        width: calc((100% / 2) - 10px);
+    }
+
+    .input-custom-message {
         background-color: $abbey-01;
         border: none;
         padding: 10px 10px;
         margin: 10px 0;
+        padding-bottom: 150px;
+        border-radius: 5px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .box-internal{
+        width: 80%;
+        margin: 0 auto;
+        h6{
+            font-weight: bold;
+            font-size: 1.3em;
+        }
     }
 </style>
