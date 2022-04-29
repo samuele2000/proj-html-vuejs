@@ -4,7 +4,7 @@
     <AdvisoryComp/>
     <NumberComp/>
     <ServicesComp/>
-
+    <TeamComp/>
   </div>
 </template>
 
@@ -12,6 +12,7 @@
 import AdvisoryComp from './componenti-main/AdvisoryComp.vue'
 import NumberComp from './componenti-main/NumberComp.vue'
 import ServicesComp from './componenti-main/ServicesComp.vue'
+import TeamComp from './componenti-main/TeamComp.vue'
 export default {
   //Cambiare il nome con quello del componente creato
   name: 'MainComp',
@@ -19,6 +20,7 @@ export default {
        AdvisoryComp,
        NumberComp,
        ServicesComp,
+       TeamComp,
     }
 }
 </script>
