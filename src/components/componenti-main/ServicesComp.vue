@@ -2,30 +2,30 @@
     <div class="bg_color py_5">
         <!--inserire contenuto componente-->
         <div class="containers">
-            <h6 class="text-uppercase c-fountain-blue">our business areas</h6>
-            <h2 class="fs-1 fw-bold py-3 text-light">Excellence in <span class="text-custom">Services</span></h2>
-            <div class="d-flex justify-content-between">
-                <div class="col-8">
-                    <p class="c-silver-sand">We are leaders in providing consultancy services with  a set of cutting-edge
+            <h6 class="c-fountain-blue">our business areas</h6>
+            <h2>Excellence in <span class="text-custom">Services</span></h2>
+            <div class="row">
+                <div class="paragraph">
+                    <p class="c-silver-sand">We are leaders in providing consultancy services with a set of cutting-edge
                         technologies and a team of experienced and renowed professional. these are some options that you
                         can hire</p>
                 </div>
 
                 <div>
-                    <button type="button" class="btn text-uppercase text-light fw-bold border-blue-lagoon px-3">see
+                    <button type="button" class="button-empty">see
                         all</button>
                 </div>
 
             </div>
 
-            <div class=" d-flex justify-content-between flex-wrap">
-                <div v-for="(element, index) in Services" :key="index" class="text-light bg_color_2 box mt-4 rounded">
+            <div class="container">
+                <div v-for="(element, index) in Services" :key="index" class="bg_color_2 box">
                     <div class="box-2">
-                        <div class="mb-3 d-flex justify-content-between pt-5">
-                            <span class="c-blue-lagoon fs-2"><i :class="`${element.icona}`"></i></span>
-                            <span class="c-blue-lagoon fs-4"><i :class="`${element.freccia}`"></i></span>
+                        <div>
+                            <span class="c-blue-lagoon"><i :class="`${element.icona}`"></i></span>
+                            <span class="c-blue-lagoon"><i :class="`${element.freccia}`" class="arrow"></i></span>
                         </div>
-                        <h6 class="text-light fw-bold fs-5">{{element.servizio}}</h6>
+                        <h6>{{element.servizio}}</h6>
                         <p class="c-silver-sand pb-5">{{element.descrizione}}</p>
                     </div>
 
@@ -91,6 +91,7 @@
     @import '../../style/variabili.scss';
 
     /*Inserire style componente*/
+    //  utility
     .bg_color {
         background-color: $woodsmoke;
     }
@@ -99,17 +100,20 @@
         background-color: $abbey-01;
     }
 
-    .containers {
-        width: 80%;
-        margin: 0 auto;
+    .c-silver-sand {
+        color: $silver-sand;
+    }
+
+    .border-blue-lagoon {
+        border: 1px solid $blue-lagoon;
+    }
+
+    .c-fountain-blue {
+        color: $fountain-blue;
     }
 
     .c-blue-lagoon {
         color: $blue-lagoon;
-    }
-
-    .c-silver-sand {
-        color: $silver-sand;
     }
 
     .text-custom {
@@ -122,19 +126,105 @@
         padding: 100px 0;
     }
 
-    .c-fountain-blue {
-        color: $fountain-blue;
-    }
-
-    .border-blue-lagoon {
+    .button-empty {
+        background-color: transparent;
         border: 1px solid $blue-lagoon;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-top: 20px;
     }
 
-    .box-2 {
-        width: 75%;
+    // fine utility
+
+
+    .containers {
+        width: 80%;
         margin: 0 auto;
+
+        h2 {
+            padding-top: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2em;
+            color: #fff;
+        }
+
+        h6 {
+            text-transform: uppercase;
+            font-size: 0.8em;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+
+            .paragraph {
+                width: 70%;
+                padding: 20px 0;
+            }
+
+        }
     }
-    .box{
-        width: calc((100% / 3) - 15px);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .box {
+            width: calc((100% / 3) - 15px);
+            color: #fff;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .box-2 {
+            width: 75%;
+            margin: 0 auto;
+            padding: 30px 0;
+
+            div {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+
+                span {
+                    font-size: 2em;
+                    padding-top: 10px;
+                }
+            }
+
+            h6 {
+                font-size: 1.1em;
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+            p{
+                padding-bottom: 30px;
+            }
+        }
     }
+    // hover
+    .box-2:hover{
+        p{
+            color: #fff;
+        }
+        span{
+            color: #fff;
+        }
+        .arrow{
+            background-color: $blue-lagoon;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            text-align: center;
+
+        }
+    }
+        .button-empty:hover{
+            background-color: $blue-lagoon;
+        }
+    
 </style>

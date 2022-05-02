@@ -70,7 +70,4 @@ export default {
      font-size: 1.1em;
  }
 
- .border-blue-lagoon{
-   border: 1px solid $blue-lagoon;
- }
 </style>
