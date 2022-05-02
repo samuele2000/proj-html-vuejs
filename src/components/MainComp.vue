@@ -1,10 +1,10 @@
 <template>
   <div>
     <!--inserire contenuto componente-->
-    <!-- <AdvisoryComp/>
+    <AdvisoryComp/>
     <NumberComp/>
-    <ServicesComp/>
-    <TeamComp/> -->
+    <!-- <ServicesComp/> -->
+    <!-- <TeamComp/>  -->
     <NewsComp/>
     <NewsletterComp/>
     <MessageComp/>
@@ -12,8 +12,8 @@
 </template>
 
 <script>
-// import AdvisoryComp from './componenti-main/AdvisoryComp.vue'
-// import NumberComp from './componenti-main/NumberComp.vue'
+import AdvisoryComp from './componenti-main/AdvisoryComp.vue'
+import NumberComp from './componenti-main/NumberComp.vue'
 // import ServicesComp from './componenti-main/ServicesComp.vue'
 // import TeamComp from './componenti-main/TeamComp.vue'
 import NewsComp from './componenti-main/NewsComp.vue'
@@ -23,8 +23,8 @@ export default {
   //Cambiare il nome con quello del componente creato
   name: 'MainComp',
     components: {
-      //  AdvisoryComp,
-      //  NumberComp,
+        AdvisoryComp,
+         NumberComp,
       //  ServicesComp,
       //  TeamComp,
        NewsComp,

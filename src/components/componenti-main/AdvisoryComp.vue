@@ -1,11 +1,11 @@
 <template>
-  <div class="containers text-center py_5">
+  <div class="containers py_5">
     <!--inserire contenuto componente-->
     <div class="box">
-        <h6 class="text-uppercase">introduction video</h6>
-        <h2 class="fs-1 fw-bold py-3">Advisory <span class="text-custom">Perfomance</span> </h2>
-        <p>Financial executives nedd to review theri srategies, operating models and capabilities so that their areas cane generate sound information for better decision making.</p>
-        <div class="img-video d-flex align-items-center justify-content-center">
+        <h6 class="c-blue-lagoon">introduction video</h6>
+        <h2>Advisory <span class="text-custom">Perfomance</span> </h2>
+        <p class="c-silver-sand">Financial executives nedd to review theri srategies, operating models and capabilities so that their areas cane generate sound information for better decision making.</p>
+        <div class="img-video">
             <span><i class="fa-solid fa-play"></i></span>
         </div>
     </div>
@@ -24,36 +24,60 @@ export default {
 
 <style scoped lang="scss">
 @import '../../style/variabili.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
  
  /*Inserire style componente*/
+//  utility
+.py_5{
+     padding: 100px 0;
+ }
+ .c-silver-sand{
+     color: $silver-sand;
+ }
+ .c-blue-lagoon{
+     color: $blue-lagoon;
+ }
+// fine utility
  .box{
      width: 60%;
      margin: 0 auto;
+     text-align: center;
+     font-family: Arial, Helvetica, sans-serif;
+     h2{
+         padding-top: 20px;
+         font-family: 'Poppins', sans-serif;
+         font-size: 2.2em;
+     }
+      h6{
+     text-transform: uppercase;
+     font-size: 0.8em;
+    }
+    p{
+     padding-top: 20px;
+     padding-bottom: 40px;
+    }
  }
  .containers{
      width: 80%;
      margin: 0 auto;
  }
- h6{
-     color: $blue-lagoon;
- }
- p{
-     color: $silver-sand;
- }
+
  .text-custom{
     color: $blue-lagoon; 
     background-color: $tradewind;
     padding: 3px 6px;
     border-radius: 5px;
  }
- .py_5{
-     padding: 100px 0;
- }
+ 
  .img-video{
      background-image: url(../../assets/img/video-1.jpg);
      background-size: cover;
      background-position: center;
      height: 300px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
  }
  .fa-solid{
      font-size: 3.5em;
