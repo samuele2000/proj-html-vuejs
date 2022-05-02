@@ -73,6 +73,9 @@ export default {
             color: white;
         }
  }
+ a:hover{
+     color: $fountain-blue;
+ }
  .button_color{
      background-color: $blue-lagoon;
  }
@@ -82,6 +85,8 @@ export default {
         padding: 10px 15px;
         border-radius: 5px;
         border: none;
-
+    }
+    .button-all:hover {
+        background-color: $fountain-blue;
     }
 </style>

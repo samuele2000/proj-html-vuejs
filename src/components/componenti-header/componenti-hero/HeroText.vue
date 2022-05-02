@@ -22,19 +22,21 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../../style/variabili.scss';
+@import '../../../style/variabili.scss';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
  
  /*Inserire style componente*/
 //  utility
-.button-all {
+  .button-all {
         text-transform: uppercase;
         color: #fff;
         padding: 10px 15px;
         border-radius: 5px;
         border: none;
         margin-right: 20px;
-
+    }
+    .button-all:hover {
+        background-color: $fountain-blue;
     }
     .button-empty {
         background-color: transparent;
@@ -44,6 +46,11 @@ export default {
         padding: 10px 20px;
         border-radius: 5px;
         margin-top: 20px;
+    }
+    .button-empty:hover {
+        background-color: $fountain-blue;
+        border-color: $fountain-blue;
+        color: #fff;
     }
     .button_color{
      background-color: $blue-lagoon;

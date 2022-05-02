@@ -5,8 +5,8 @@
             <div class="rows">
                 <div class="input">
                     <div class="text">
-                        <h6 class="title-2 c-fountain-blue">send a message</h6>
-                        <h2 class="title">Get in <span class="text-custom c-blue-lagoon">Touch</span></h2>
+                        <h6 class="c-fountain-blue">send a message</h6>
+                        <h2>Get in <span class="text-custom c-blue-lagoon">Touch</span></h2>
                         <p class="c-silver-sand">
                             We will responde to your message as soon as possible.
                         </p>
@@ -66,7 +66,7 @@
 
 <style scoped lang="scss">
     @import '../../style/variabili.scss';
-
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
     /*Inserire style componente*/
     // color
     .bg-blue-lagoon {
@@ -76,12 +76,6 @@
     .bg_surfiegreen {
         background-color: $surfiegreen;
     }
-
-    .containers {
-        width: 80%;
-        margin: 0 auto;
-    }
-
     .c-blue-lagoon {
         color: $blue-lagoon;
     }
@@ -110,33 +104,7 @@
     .my_40 {
         margin: 40px 0;
     }
-
-    .p_30 {
-        padding-top: 100px;
-    }
-
-    .p-relative {
-        position: relative;
-    }
-
-    .opacity {
-        opacity: 0;
-    }
-
-    .d-none {
-        display: none;
-    }
-
-    .overlay {
-        background-color: rgba(0, 0, 0, 0.5);
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        border-radius: 10px;
-    }
-
+    
     .circle {
         width: 35px;
         height: 35px;
@@ -146,20 +114,29 @@
     }
 
     //fine utility
-
-    .title {
-        font-weight: bold;
-        font-size: 2em;
-        margin: 20px 0;
+    .containers {
+        width: 80%;
+        margin: 0 auto;
     }
+    .text {
+        margin-right: 50px;
 
-    .title-2 {
-        font-weight: bold;
-        font-size: 0.8em;
-        margin: 20px 0;
-        text-transform: uppercase;
+        h2 {
+            padding-top: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2em;
+        }
+
+        h6 {
+            text-transform: uppercase;
+            font-size: 0.8em;
+        }
+
+        p {
+            padding-top: 20px;
+            padding-bottom: 40px;
+        }
     }
-
     .text-custom {
         background-color: $surfiegreen;
         padding: 3px 6px;
@@ -175,10 +152,14 @@
     .button-all {
         text-transform: uppercase;
         color: #fff;
-        padding: 5px 20px;
+        padding: 10px 20px;
         border-radius: 5px;
         border: none;
         margin-top: 20px;
+    }
+
+    .button-all:hover {
+        background-color: $fountain-blue;
     }
 
     .button-empty {
@@ -186,9 +167,15 @@
         border: 1px solid $blue-lagoon;
         text-transform: uppercase;
         color: $blue-lagoon;
-        padding: 5px 20px;
+        padding: 10px 20px;
         border-radius: 5px;
         margin-top: 20px;
+    }
+
+    .button-empty:hover {
+        background-color: $fountain-blue;
+        border-color: $fountain-blue;
+        color: #fff;
     }
 
     .input {
@@ -197,9 +184,7 @@
         flex-basis: 60%;
     }
 
-    .text {
-        margin-right: 50px;
-    }
+
 
     .input-custom {
         background-color: $abbey-01;
@@ -225,12 +210,17 @@
         flex-direction: column;
         margin-top: 40px;
     }
-    .box-internal{
+
+    .box-internal {
         width: 80%;
         margin: 0 auto;
-        h6{
+
+        h6 {
             font-weight: bold;
             font-size: 1.3em;
+        }
+        p{
+            margin: 20px 0;
         }
     }
 </style>

@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import NavComp from '../partials/NavComp.vue'
-import LogoComp from '../partials/LogoComp.vue' 
-import HeroText from '../partials/HeroText.vue'
+import NavComp from './NavComp.vue'
+import LogoComp from './LogoComp.vue' 
+import HeroText from './componenti-hero/HeroText.vue'
 export default {
   //Cambiare il nome con quello del componente creato
   name: 'Hero',

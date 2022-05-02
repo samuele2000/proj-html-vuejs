@@ -31,9 +31,7 @@ export default {
     }
  div{
    color: $silver-sand;
- }
- a{
-   color: $silver-sand;
+   font-size: 0.9em;
  }
  .bg_color{
    background-color: $woodsmoke;

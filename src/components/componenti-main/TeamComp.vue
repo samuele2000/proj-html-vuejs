@@ -151,6 +151,9 @@
         text-align: center;
         line-height: 30px;
     }
+    .circle:hover{
+        color: $fountain-blue;
+    }
 
     .text-custom {
         color: $blue-lagoon;

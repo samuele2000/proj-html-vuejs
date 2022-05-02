@@ -6,15 +6,16 @@
                 <!-- info -->
                 <div>
                     <div class="box-internal">
-                        <h6>Logo</h6>
+                        <div class="logo">
+                            <h2><span class="nex-custom">nex</span><span class="gen-custom">gen</span></h2>
+                        </div>
                         <p class="c-silver-sand">A functionalHTML Template for Corporate & Business</p>
                         <div class="info">
                             <span class="c-silver-sand"><i class="fa-solid fa-phone mr_10"></i>+1
                                 (305) 1234-5678</span>
                             <span class="c-silver-sand"><i
                                     class="fa-solid fa-envelope my_40 mr_10"></i>hello@example.com</span>
-                            <span class="c-silver-sand"><i
-                                    class="fa-solid fa-location-dot mr_10"></i>Main Avenue,
+                            <span class="c-silver-sand"><i class="fa-solid fa-location-dot mr_10"></i>Main Avenue,
                                 987</span>
                             <div>
                                 <button type="button" class="button-empty c-silver-sand">get in touch</button>
@@ -36,7 +37,7 @@
                     </ul>
                 </div>
 
-                 <div class="box-link">
+                <div class="box-link">
                     <ul>
                         <li>
                             <h3>Services</h3>
@@ -48,7 +49,7 @@
                     </ul>
                 </div>
 
-                 <div class="box-link">
+                <div class="box-link">
                     <ul>
                         <li>
                             <h3>Support</h3>
@@ -69,10 +70,9 @@
     export default {
         //Cambiare il nome con quello del componente creato
         name: 'FooterLinkComp',
-        data(){
-            return{
-                linkAbout:[
-                    {
+        data() {
+            return {
+                linkAbout: [{
                         name: 'The company',
                         icon: 'fa-solid fa-angle-right',
                         href: '#'
@@ -103,8 +103,7 @@
                         href: '#'
                     },
                 ],
-                linkServices:[
-                    {
+                linkServices: [{
                         name: 'Audit & Assurance',
                         icon: 'fa-solid fa-angle-right',
                         href: '#'
@@ -135,8 +134,7 @@
                         href: '#'
                     },
                 ],
-                linkSupport:[
-                    {
+                linkSupport: [{
                         name: 'Responsability',
                         icon: 'fa-solid fa-angle-right',
                         href: '#'
@@ -180,7 +178,8 @@
     .bg-blue-lagoon {
         background-color: $blue-lagoon;
     }
-    .bg_image{
+
+    .bg_image {
         background-image: url(../../assets/img/bg-7.jpg);
         background-size: cover;
         background-position: center;
@@ -229,20 +228,28 @@
     }
 
     //fine utility
-    ul{
+    ul {
         list-style: none;
-        li{
-            margin: 5px 0;
-            h3{
+
+        li {
+            margin: 10px 0;
+
+            h3 {
                 color: #fff;
                 margin-bottom: 20px;
+                font-size: 1.5em;
             }
-            a{
+
+            a {
                 text-decoration: none;
                 margin-left: 10px;
             }
         }
     }
+    a:hover{
+        color: $fountain-blue;
+    }
+
     .rows {
         display: flex;
         justify-content: space-between;
@@ -253,9 +260,14 @@
         background-color: transparent;
         border: 1px solid $blue-lagoon;
         text-transform: uppercase;
-        padding: 5px 20px;
+        padding: 10px 20px;
         border-radius: 5px;
         margin-top: 20px;
+    }
+    .button-empty:hover {
+        background-color: $fountain-blue;
+        border-color: $fountain-blue;
+        color: #fff;
     }
 
     .info {
@@ -263,17 +275,38 @@
         flex-direction: column;
         margin-top: 40px;
     }
-    .box-internal{
+
+    .box-internal {
         width: 80%;
         margin: 0 auto;
-        h6{
-            font-weight: bold;
-            font-size: 1.3em;
-        }
     }
-    .box-link{
+
+    .box-link {
         background-color: $abbey-01;
-        padding: 40px 50px 20px 10px ;
+        padding: 40px 50px 30px 40px;
         border-radius: 5px;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.1em;
+        font-weight: 900;
+        letter-spacing: 5px;
+    }
+
+    .nex-custom {
+        color: $blue-lagoon;
+        background-color: $surfiegreen;
+        padding: 7px 0px 7px 20px;
+        border-radius: 50px 0 0 50px;
+    }
+
+    .gen-custom {
+        color: $silver-sand;
+        margin-left: 3px;
+    }
+    .logo{
+        margin-bottom: 30px;
     }
 </style>

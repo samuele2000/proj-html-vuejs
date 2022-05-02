@@ -223,8 +223,10 @@
 
         }
     }
-        .button-empty:hover{
-            background-color: $blue-lagoon;
-        }
+        .button-empty:hover {
+        background-color: $fountain-blue;
+        border-color: $fountain-blue;
+        color: #fff;
+    }
     
 </style>
