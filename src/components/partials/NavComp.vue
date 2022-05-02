@@ -1,14 +1,14 @@
 <template>
-  <div class="d-flex align-items-baseline">
-      <ul class="d-flex">
-          <li v-for="(element, index) in menuNav" :key="(index)" class="mx-3 text-uppercase">
+  <div class="box">
+      <ul>
+          <li v-for="(element, index) in menuNav" :key="(index)">
               <a :href="`${element.href}`">{{element.name}}</a>
           </li>
           <li>
-              <a href="#" class="mx-3"><i class="fa-regular fa-user"></i></a>
+              <a href="#" class="mx-10"><i class="fa-regular fa-user"></i></a>
           </li>
       </ul>
-      <button type="button" class="btn text-uppercase button_color text-light fw-bold">get in touch</button>
+      <button type="button" class="button_color button-all">get in touch</button>
   </div>
 </template>
 
@@ -50,14 +50,38 @@ export default {
 @import '../../style/variabili.scss';
  
  /*Inserire style componente*/
+//  utility
+.mx-10{
+  margin: 0 10px;
+}
+// fine utility
+ .box{
+     display: flex;
+     justify-content: space-between;
+     font-family: Arial, Helvetica, sans-serif;
+ }
  ul{
      list-style: none;
-     a{
-         text-decoration: none;
-         color: white;
+     display: flex;
+     align-items: center;
+     li{
+         text-transform: uppercase;
+         margin: 0 10px;
      }
+        a{
+            text-decoration: none;
+            color: white;
+        }
  }
  .button_color{
      background-color: $blue-lagoon;
  }
+ .button-all {
+        text-transform: uppercase;
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: none;
+
+    }
 </style>

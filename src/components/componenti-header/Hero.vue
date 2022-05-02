@@ -1,12 +1,11 @@
 <template>
 <div id="hero">
-  <div class="d-flex containers justify-content-between py-3 align-items-baseline">
+  <div class="containers">
     <LogoComp/>
     <NavComp/>
   </div>
-  <div>
-    <HeroText/>
-  </div>
+  <HeroText class="heroText"/>
+ 
 </div>
   
 </template>
@@ -32,11 +31,23 @@ export default {
  /*Inserire style componente*/
   #hero{
     background-image: url(../../assets/img/bg-2.jpg);
-    background-position: top;
+    background-position: center;
     background-size: cover;
+    height: 700px;
+    position: relative;
   }
   .containers{
    width: 80%;
    margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   padding-top: 20px;
+   align-items: baseline;
  }
+  .heroText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 </style>

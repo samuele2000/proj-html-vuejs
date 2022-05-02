@@ -1,13 +1,13 @@
 <template>
-  <div class="containers text-center pb_5">
+  <div>
       <div class="box">
-        <h2 class="text-white fw-bold fs-1">Financial Risk</h2>  
+        <h2 class="f-family">Financial Risk</h2>  
         <p class="py-3">
             The right outcomes depend on continuous rigor in governance, models, and
             processes across the finance function.
         </p>
-        <button type="button" class="btn text-uppercase button_color text-light fw-bold">get in touch</button>
-        <button type="button" class="btn text-uppercase text-light fw-bold ms-3 border-blue-lagoon px-3">read more</button>
+        <button type="button" class="button-all button_color">get in touch</button>
+        <button type="button" class="button-empty">read more</button>
       </div>   
   </div>
 </template>
@@ -23,21 +23,53 @@ export default {
 
 <style scoped lang="scss">
 @import '../../style/variabili.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
  
  /*Inserire style componente*/
-.button_color{
+//  utility
+.button-all {
+        text-transform: uppercase;
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: none;
+        margin-right: 20px;
+
+    }
+    .button-empty {
+        background-color: transparent;
+        border: 1px solid $blue-lagoon;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    .button_color{
      background-color: $blue-lagoon;
  }
+ .f-family{
+   font-family: 'Poppins', sans-serif;
+ }
+// fine utility
+
+
  .box{
-     width: 50%;
-     margin: 100px auto;
+     width: 40%;
+     text-align: center;
+     font-family:Arial, Helvetica, sans-serif;
+     h2{
+       color: #fff;
+       font-weight: bold;
+       font-size: 3em;
+     }
  }
  p{
      color: $silver-sand;
+     padding: 15px 0;
+     font-size: 1.1em;
  }
- .pb_5{
-     padding-bottom: 100px;
- }
+
  .border-blue-lagoon{
    border: 1px solid $blue-lagoon;
  }
